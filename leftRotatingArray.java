@@ -11,9 +11,9 @@ public class leftRotatingArray {
     static void leftrotate(int[] arr,int k){
         int n=arr.length;
         k=k%n; // if k>n
-        rotate(arr, 0, k-1);
-        rotate(arr, k, n-1);
-        rotate(arr, 0, n-1);
+        rotate(arr, 0, k-1); //Reversed first k element
+        rotate(arr, k, n-1); //Reversed last k element
+        rotate(arr, 0, n-1); // Reversed entire array
     }
     public static void main(String[] args) {
         int arr[]={1,2,3,4,5,6};
@@ -24,3 +24,4 @@ public class leftRotatingArray {
         }
     }
 }
+
