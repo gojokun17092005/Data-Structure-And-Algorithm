@@ -5,7 +5,7 @@ class Solution {
 
     }
     private long sqrt(long n){
-        long low=0;
+        long low=1;
         long high=n;
         long result=-1;
         while(low<=high){
