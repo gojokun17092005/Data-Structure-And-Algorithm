@@ -8,15 +8,16 @@ class Solution {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            TreeNode node = null;
 
             for (int i = 0; i < size; i++) {
-                node = queue.poll();
+                TreeNode node = queue.poll();
+                if(i==size-1){
+                    result.add(node.val);
+                }
 
                 if (node.left != null) queue.offer(node.left);
                 if (node.right != null) queue.offer(node.right);
             }
-            result.add(node.val);
         }
 
         return result;
